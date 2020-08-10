@@ -23,4 +23,4 @@ class TimeEntry:
       isHol = self.holiday_activity
     if(self.day == 'Friday'):
       br = '\n'
-    return f'On {self.day} [{self.date}] you logged {self.hours} hours {isHol}{br}'
+    return f'{self.day} [{self.date}] - {self.hours} hours {isHol}{br}'
