@@ -7,11 +7,11 @@ redmine_api_key = "524cb5a3946f9170333ce59b45d52eace5b44224"
 headers = {"Content-Type": "application/json", "X-Redmine-Api-Key": redmine_api_key, "origin": "https://cors-anywhere.herokuapp.com/"}
 proxy = 'http://localhost:8383'
 
-def fetchTimeEntries(harvard_project_id):
-  params = {}
-  params['limit'] = 100
+def fetchTimeEntries(harvard_project_id): 
+  params = {} 
+  params = addDateRangeToParams()
   params['project_id'] = harvard_project_id
-  params = addDateRangeToParams(params)
+  params['limit'] = 100
 
   r = requests.get(f'{proxy}/time-entries', headers = headers, params=params)
   response = r.json()
