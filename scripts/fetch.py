@@ -21,7 +21,7 @@ def fetchTimeEntries(harvard_project_id):
 def fetchProjectDetails():
   params = {'include': 'time_entry_activities'}
 
-  r = requests.get('{proxy}/projects', headers = headers, params=params)
+  r = requests.get(f'{proxy}/projects', headers = headers, params=params)
   response = r.json()
   projects = response.get("projects")
 
@@ -34,4 +34,4 @@ def fetchProjectDetails():
       project = {'id': project_id, 'name': project_name}
       project_options.append(project)
 
-  print(project_options)
+  return project_options

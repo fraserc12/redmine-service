@@ -5,8 +5,7 @@ from itertools import groupby
 from fetch import *
 from date_functions import *
 from time_entry import TimeEntry
-
-harvard_project_id = '573'
+import calendar
 
 def constructHourSummary(entries):
   hour_summary = []
@@ -26,13 +25,29 @@ def constructHourSummary(entries):
 
   return hour_summary
 
+def select_project(projects):
+  valid_project_id = []
+  for i in range(len(projects)):
+    print(f'{i+1}: {projects[i].get("name")}')
+    valid_project_id.append(i)
+
+  project_selection = int(input('\nSelect Project: ')) - 1
+
+  while not (project_selection in valid_project_id):
+    print("\nInvalid Project! Try again.. \n")
+    project_selection = int(input('\nSelect Project: ')) - 1
+
+  return project_selection
+
 def printSummary(summary):
-  print("\n")
+  print("\n-- Summary --\n")
   #reversed cos redmine does it from today backwards - not a fan
   for entry in reversed(summary):
     print(entry)
 
-# fetchProjectDetails()
-entries = fetchTimeEntries(harvard_project_id)
+
+all_projects = fetchProjectDetails()
+project_selected = select_project(all_projects)
+entries = fetchTimeEntries(all_projects[project_selected].get('id'))
 hour_summary = constructHourSummary(entries)
 printSummary(hour_summary)

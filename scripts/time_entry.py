@@ -20,7 +20,7 @@ class TimeEntry:
     isHol = ''
     br = ''
     if(self.isHoliday):
-      isHol = self.holiday_activity
+      isHol = f'({TimeEntry.holiday_activity})'
     if(self.day == 'Friday'):
       br = '\n'
     return f'{self.day} [{self.date}] - {self.hours} hours {isHol}{br}'
