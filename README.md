@@ -5,6 +5,7 @@ This command line Python script will do a lookback of time entries, for the curr
 - 15th to Last day of month
 
 Depending on the current date.
+Note: Only dates with time entries will be printed
 
 ## Why
 I was fed up of checking Redmine's UI to see if I had looged 8 hours per day - especially when it came to "redmine day"
