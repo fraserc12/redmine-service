@@ -12,7 +12,7 @@ I was fed up of checking Redmine's UI to see if I had looged 8 hours per day - e
 ### Set Up
 * Docker
 * Python3
-* Get your Redmine API key and set environment variable on your OS called 'redmine_api_key'
+* Get your Redmine API key and set environment variable on your OS called `redmine_api_key`
 - On Mac OS for example: `export redmine_api_key='<key>'`
 
 ### To Run 
