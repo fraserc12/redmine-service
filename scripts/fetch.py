@@ -3,7 +3,7 @@ import json
 import os
 from date_functions import add_date_range_to_params
 
-redmine_api_key = os.environ.get('redmine_api_key')
+redmine_api_key = '524cb5a3946f9170333ce59b45d52eace5b44224'
 headers = {"Content-Type": "application/json", "X-Redmine-Api-Key": redmine_api_key, "origin": "https://cors-anywhere.herokuapp.com/"}
 proxy = 'http://localhost:8383'
 
