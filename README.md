@@ -23,5 +23,5 @@ I was fed up of checking Redmine's UI to see if I had looged 8 hours per day - e
 - Then select your project when command line prompts you
 
 ### Disclaimer
-I am new to Python - this code works but will probably be improved upon when I learn more
+I am new to Python - this code works but will probably be improved upon when I learn more. 
 Feel free to submit Pull Request
