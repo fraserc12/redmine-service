@@ -1,4 +1,3 @@
-#!/usr/local/bin/python3
 import requests
 import pylint.reporters.json_reporter
 from itertools import groupby

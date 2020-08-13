@@ -1,4 +1,3 @@
-#!/usr/local/bin/python3
 from date_functions import *
 
 class TimeEntry:
