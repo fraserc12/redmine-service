@@ -6,7 +6,7 @@ from date_functions import *
 from time_entry import TimeEntry
 import calendar
 
-def constructHourSummary(entries):
+def construct_hour_summary(entries):
   hour_summary = []
   #group entries by Date
   for spent_on, time_entries in groupby(entries, lambda x: x['spent_on']):
@@ -38,15 +38,15 @@ def select_project(projects):
 
   return project_selection
 
-def printSummary(summary):
+def print_summary(summary):
   print("\n-- Summary --\n")
   #reversed cos redmine does it from today backwards - not a fan
   for entry in reversed(summary):
     print(entry)
 
 
-all_projects = fetchProjectDetails()
+all_projects = fetch_project_details()
 project_selected = select_project(all_projects)
-entries = fetchTimeEntries(all_projects[project_selected].get('id'))
-hour_summary = constructHourSummary(entries)
-printSummary(hour_summary)
+entries = fetch_time_entries(all_projects[project_selected].get('id'))
+hour_summary = construct_hour_summary(entries)
+print_summary(hour_summary)

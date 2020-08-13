@@ -3,7 +3,7 @@ import calendar
 
 date_format_str = '%Y-%m-%d'
 
-def addDateRangeToParams():
+def add_date_range_to_params():
   today = datetime.datetime.now()
   day = today.strftime("%d")
   month = today.strftime("%m")
@@ -23,15 +23,15 @@ def addDateRangeToParams():
 
   return params
 
-def getDateString(date):
-  datetime_obj = getDateObject(date)
+def get_date_dtring(date):
+  datetime_obj = get_date_object(date)
   return datetime_obj.date().strftime("%d %b %Y")
 
-def getDay(date):
-  datetime_obj = getDateObject(date)
+def get_day(date):
+  datetime_obj = get_date_object(date)
   return datetime_obj.date().strftime('%A')
 
-def getDateObject(date):
+def get_date_object(date):
   return datetime.datetime.strptime(date, date_format_str)
 
 # def get_current_date_range():
