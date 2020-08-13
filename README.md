@@ -10,8 +10,8 @@ Depending on the current date.
 I was fed up of checking Redmine's UI to see if I had looged 8 hours per day - especially when it came to "redmine day"
 
 ### Set Up
-* Docker
-* Python3
+* Docker 
+* Python3 - https://www.python.org/downloads/
 * Get your Redmine API key and set environment variable on your OS called `redmine_api_key`
 - On Mac OS for example: `export redmine_api_key='<key>'`
 
@@ -23,3 +23,4 @@ I was fed up of checking Redmine's UI to see if I had looged 8 hours per day - e
 
 ### Disclaimer
 I am new to Python - this code works but will probably be improved upon when I learn more
+Feel free to submit Pull Request
