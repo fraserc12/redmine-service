@@ -33,16 +33,3 @@ def get_day(date):
 
 def get_date_object(date):
   return datetime.datetime.strptime(date, date_format_str)
-
-# def get_current_date_range():
-#   date_range = []
-#   sdate = datetime.date(int(year), int(month), 1)
-#   edate = datetime.date(int(year), int(month), int(day))
-
-#   delta = edate - sdate       # as timedelta
-
-#   for i in range(delta.days + 1):
-#     dayNow = sdate + datetime.timedelta(days=i)
-#     date_range.append(str(dayNow))
-
-#   return date_range

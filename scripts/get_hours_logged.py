@@ -1,15 +1,14 @@
 import requests
-import pylint.reporters.json_reporter
 from itertools import groupby
 from fetch import *
 from date_functions import *
 from time_entry import TimeEntry
-import calendar
+from operator import itemgetter
 
 def construct_hour_summary(entries):
   hour_summary = []
   #group entries by Date
-  for spent_on, time_entries in groupby(entries, lambda x: x['spent_on']):
+  for spent_on, time_entries in groupby(entries, key=itemgetter('spent_on')):
     total_hours = 0
     date = ''
     activity = ''
