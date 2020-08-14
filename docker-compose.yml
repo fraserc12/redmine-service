@@ -1,12 +1,12 @@
-version: '2'
+version: '3'
 
 services:
   python-redmine-server:
-    build: .
+    build: ./backend
     ports:
-      - 5001:5000
+      - 5000:5000
     volumes:
-      - .:/src
+      - ./backend:/src
     depends_on:
       - reverse-proxy
   reverse-proxy:
@@ -14,4 +14,10 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./backend/nginx.conf:/etc/nginx/nginx.conf
+  my-vue-app:
+    build: ./frontend
+    ports:
+      - '8081:8080'
+    depends_on:
+      - reverse-proxy
