@@ -1,9 +1,17 @@
 version: '2'
 
 services:
+  python-redmine-server:
+    build: .
+    ports:
+      - 5001:5000
+    volumes:
+      - .:/src
+    depends_on:
+      - reverse-proxy
   reverse-proxy:
     image: nginx:latest
     ports:
-      - 8383:80
+      - 80:80
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf

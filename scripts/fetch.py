@@ -8,7 +8,7 @@ from date_functions import add_date_range_to_params
 config.read('env.ini')
 redmine_api_key = config['redmine']['redmine_api_key']
 headers = {"Content-Type": "application/json", "X-Redmine-Api-Key": redmine_api_key, "origin": "https://cors-anywhere.herokuapp.com/"}
-proxy = 'http://localhost:8383'
+proxy = 'http://reverse-proxy:80'
 
 def fetch_time_entries(harvard_project_id): 
   params = {} 
