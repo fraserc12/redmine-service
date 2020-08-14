@@ -37,9 +37,3 @@ def select_project(projects):
     project_selection = int(input('\nSelect Project: ')) - 1
 
   return project_selection
-
-def print_summary(summary):
-  print("\n-- Summary --\n")
-  #reversed cos redmine does it from today backwards - not a fan
-  for entry in reversed(summary):
-    print(entry)
