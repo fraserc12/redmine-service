@@ -1,0 +1,6 @@
+beautifulsoup4
+bs4
+requests
+jsons
+Flask
+flask_cors
