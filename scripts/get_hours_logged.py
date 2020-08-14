@@ -47,5 +47,8 @@ def print_summary(summary):
 all_projects = fetch_project_details()
 project_selected = select_project(all_projects)
 entries = fetch_time_entries(all_projects[project_selected].get('id'))
-hour_summary = construct_hour_summary(entries)
-print_summary(hour_summary)
+if not entries:
+  print("\nNo time entries found!")
+else:
+  hour_summary = construct_hour_summary(entries)
+  print_summary(hour_summary)
