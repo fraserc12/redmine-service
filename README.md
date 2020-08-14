@@ -14,8 +14,7 @@ I was fed up of checking Redmine's UI to see if I had looged 8 hours per day - e
 ### Set Up
 * Docker 
 * Python3 - https://www.python.org/downloads/
-* Get your Redmine API key and set environment variable on your OS called `redmine_api_key`  
- On Mac OS for example: `export redmine_api_key='<key>'` (you may need to open new terminal window for this to take effect)
+* Get your Redmine API key and set the `redmine_api_key` variable in the **env.ini** file
 
 ### To Run 
 - From the root directory: `pip3 install -r requirements.txt` to install dependencies
