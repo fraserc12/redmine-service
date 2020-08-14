@@ -9,7 +9,7 @@ As our time entries are submitted in the middle of the month and at the end.
 **Note:** Only dates with time entries will be printed
 
 ## Docs
-2 endpoints are exposed
+2 endpoints are exposed on `http://localhost:5001`
 - GET `/projects`  - returns details of all your projects
 - GET `/time-logged?project_id=<id>` - will return a summarised list of time entries per day
 
