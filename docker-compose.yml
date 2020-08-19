@@ -19,5 +19,7 @@ services:
     build: ./frontend
     ports:
       - '8081:8080'
+    volumes:
+      - ./frontend:/app
     depends_on:
       - reverse-proxy

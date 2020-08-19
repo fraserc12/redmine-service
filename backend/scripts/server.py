@@ -15,8 +15,9 @@ cors = CORS(app)
 @app.route('/time-logged', methods=['GET'])
 def time_logged():
   project_id = request.args.get('project_id')
+  api_key = request.args.get('api_key')
   print(project_id)
-  entries = fetch_time_entries(project_id)
+  entries = fetch_time_entries(project_id, api_key)
   hour_summary = construct_hour_summary(entries)
 
   return Response(dumps(hour_summary), mimetype='application/json')
@@ -24,7 +25,8 @@ def time_logged():
 # return project details
 @app.route('/projects', methods=['GET'])
 def projects():
-  all_projects = fetch_project_details()
+  api_key = request.args.get('api_key')
+  all_projects = fetch_project_details(api_key)
   return Response(dumps(all_projects), mimetype='application/json')
 
 # If we're running in stand alone mode, run the application
